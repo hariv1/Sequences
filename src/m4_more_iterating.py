@@ -639,6 +639,17 @@ def run_test_sum_first_n():
 
     # TO DO 8 (continued):  Add your 2 ADDITIONAL tests here:
 
+    # Test 8:  This test uses a RANDOMLY generated sequence
+    #          and an ORACLE to determine the expected (correct) result.
+    sequence = []
+    for _ in range(100):
+        sequence.append(random.randrange(-190, 210))
+    expected = builtins.sum(sequence[:5])
+    actual = sum_first_n(sequence, 5)
+    print()
+    print('Test 8 expected:', expected)
+    print('       actual:  ', actual)
+
 
 def sum_first_n(numbers, n):
     """
@@ -662,7 +673,7 @@ def sum_first_n(numbers, n):
       :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # RESTRICTION:
@@ -671,6 +682,14 @@ def sum_first_n(numbers, n):
     #      -- The TESTING code above does use   built_ins.sum
     #         as an ORACLE in TESTING this function, however.
     # ------------------------------------------------------------------
+
+    sum = 0
+
+    for k in range(n):
+        sum = sum + numbers[k]
+
+    return sum
+
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
