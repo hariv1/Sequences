@@ -22,7 +22,7 @@ import rosegraphics as rg
 def main():
     """ Calls the   TEST   functions in this module. """
     # ------------------------------------------------------------------
-    # TODO: 2.  EXAMINE the  4  sequences immediately below
+    # DONE: 2.  EXAMINE the  4  sequences immediately below
     #   this comment, and READ the instructions that follows them.
     #
     # When you have examined the 4 sequences below and understand how
@@ -48,7 +48,7 @@ def main():
     # ------------------------------------------------------------------
 
     run_test_print_all_items_forwards(sequence1, sequence2, sequence3, sequence4)
-#     run_test_print_all_items_backwards(sequence1, sequence2, sequence3, sequence4)
+    run_test_print_all_items_backwards(sequence1, sequence2, sequence3, sequence4)
 #     run_test_print_items_at_odd_indices(sequence1, sequence2, sequence3, sequence4)
 #     run_test_print_items_in_second_half(sequence1, sequence2, sequence3, sequence4)
 #     run_test_print_items_that_are_bigger_than_5()  # Uses different sequences
@@ -379,9 +379,13 @@ def print_all_items_backwards(sequence):
        55
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
+
+    for k in range(len(sequence)-1, -1, -1):
+        print(sequence[k])
+
 
 
 # ----------------------------------------------------------------------
